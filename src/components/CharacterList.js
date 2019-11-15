@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CharacterCard from "./CharacterCard";
+import { Link } from "react-router-dom";
 // import styled from "styled-components";
 
 export default function CharacterList() {
@@ -27,16 +28,24 @@ export default function CharacterList() {
       {chars.map(character => {
         return (
           <CharacterCard
+            key={character.id}
             name={character.name}
-            image={character.url}
+            image={character.image}
             status={character.status}
             species={character.species}
           />
+
           // <section className="character-list">
           //   <h2>TODO: `array.map()` over your state here!</h2>
           // </section>
         );
       })}
+
+      <div>
+        <Link to={`/`}>
+          <a href="">Home</a>
+        </Link>
+      </div>
     </div>
   );
 }

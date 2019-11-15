@@ -1,6 +1,7 @@
 import React from "react";
 import CharacterList from "./CharacterList";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 // styling
 const StyledDiv = styled.div`
@@ -20,7 +21,7 @@ const CharacterCard = props => {
   return (
     <StyledDiv>
       <h1>{props.name}</h1>
-      <img src={props.url} alt={props.name} />
+      <img src={props.image} alt={props.name} />
       <h3>Status: {props.status}</h3>
       <h3>Species: {props.species}</h3>
     </StyledDiv>
