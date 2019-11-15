@@ -40,12 +40,6 @@ export default function CharacterList() {
           // </section>
         );
       })}
-
-      <div>
-        <Link to={`/`}>
-          <a href="">Home</a>
-        </Link>
-      </div>
     </div>
   );
 }

@@ -10,8 +10,9 @@ export default function Header() {
           <a href="">Home</a>
         </Link>
       </div>
+
       <div>
-        <Link to={`./components/LocationsList`}>
+        <Link to={`/CharacterList`}>
           <a href="">Characters</a>
         </Link>
       </div>

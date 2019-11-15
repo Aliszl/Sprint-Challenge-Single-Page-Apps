@@ -15,6 +15,7 @@ export default function App() {
       {/* <WelcomePage /> */}
 
       <Route exact path="/" render={WelcomePage} />
+      <Route exact path="/CharacterList" component={CharacterList} />
 
       {/* <Route
         exact
@@ -22,9 +23,8 @@ export default function App() {
         component={CharacterList}
       /> */}
 
-      <CharacterList />
+      {/* <CharacterList /> */}
 
-      <LocationsList />
       {/* <CharacterList /> */}
       {/* <Route
         exact path="/testing-render"
