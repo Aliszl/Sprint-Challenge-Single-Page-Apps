@@ -14,8 +14,12 @@ export default function App() {
       <Header />
       {/* <WelcomePage /> */}
 
-      <Route exact path="/" render={WelcomePage} />
-      <Route exact path="/CharacterList" component={CharacterList} />
+      <Route exact path="/" component={WelcomePage} />
+      <Route
+        exact
+        path="/CharacterList"
+        render={props => <CharacterList {...props} />}
+      />
 
       {/* <Route
         exact

@@ -2,11 +2,22 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CharacterCard from "./CharacterCard";
 import { Link } from "react-router-dom";
+import SearchForm from "./SearchForm";
 // import styled from "styled-components";
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
   const [chars, fetchChars] = useState([]);
+  const [searchValue, setSearchValue] = useState("");
+
+  const handleChange = event => {
+    setSearchValue(event.target.value);
+  };
+
+  const filteredChars = chars.filter(char => {
+    return char.name.toLowerCase().indexOf(searchValue.toLowerCase()) !== -1;
+  });
+
   useEffect(() => {
     // TODO: Add API Request here - must run in `useEffect`
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
@@ -25,7 +36,9 @@ export default function CharacterList() {
 
   return (
     <div className="CardContainer">
-      {chars.map(character => {
+      {/* < search form component> */}
+      <SearchForm searchValue={searchValue} handleChange={handleChange} />
+      {filteredChars.map(character => {
         return (
           <CharacterCard
             key={character.id}
