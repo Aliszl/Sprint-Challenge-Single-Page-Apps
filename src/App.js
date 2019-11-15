@@ -10,11 +10,12 @@ import LocationsList from "./components/LocationsList";
 export default function App() {
   return (
     <div>
+      {/* <Route exact path="/" component={WelcomePage} /> */}
+      <Route exact path="/" render={WelcomePage} />
       <Header />
       {/* <CharacterCard /> */}
       <LocationsList />
       <CharacterList />
-      <Route exact path="/" component={WelcomePage} />
       {/* <Route
         exact
         path="/testing-render"
