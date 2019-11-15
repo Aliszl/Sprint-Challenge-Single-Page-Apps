@@ -28,6 +28,7 @@ export default function CharacterList() {
         return (
           <CharacterCard
             name={character.name}
+            image={character.url}
             status={character.status}
             species={character.species}
           />
